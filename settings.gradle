@@ -1,0 +1,8 @@
+rootProject.name = "java-transform_components"
+
+
+include ":java-scene_graph"
+project(":java-scene_graph").projectDir = new File(settingsDir, "../java-scene_graph")
+
+include ":java-math"
+project(":java-math").projectDir = new File(settingsDir, "../java-math")

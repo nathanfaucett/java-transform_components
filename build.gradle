@@ -1,0 +1,24 @@
+apply plugin: "java"
+
+
+group = "com.github.nathanfaucett"
+version = "0.0.1"
+description = "entity component scene graph"
+
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile project(":java-math")
+    compile project(":java-scene_graph")
+    compile "org.slf4j:slf4j-api:1.7.21"
+    compile "junit:junit:4.12"
+}
+
+gradle.projectsEvaluated {
+    tasks.withType(JavaCompile) {
+        options.compilerArgs << "-Xlint:deprecation" << "-Xlint:unchecked"
+    }
+}
