@@ -1,6 +1,9 @@
 rootProject.name = "java-transform_components"
 
 
+include ":java-event_emitter"
+project(":java-event_emitter").projectDir = new File(settingsDir, "../java-event_emitter")
+
 include ":java-scene_graph"
 project(":java-scene_graph").projectDir = new File(settingsDir, "../java-scene_graph")
 
